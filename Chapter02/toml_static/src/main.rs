@@ -6,16 +6,19 @@ struct Input {
     xml_file: String,
     json_file: String,
 }
+
 #[allow(unused)]
 #[derive(Deserialize)]
 struct Redis {
     host: String,
 }
+
 #[allow(unused)]
 #[derive(Deserialize)]
 struct Sqlite {
     db_file: String,
 }
+
 #[allow(unused)]
 #[derive(Deserialize)]
 struct Postgresql {
@@ -25,6 +28,7 @@ struct Postgresql {
     port: String,
     database: String,
 }
+
 #[allow(unused)]
 #[derive(Deserialize)]
 struct Config {
