@@ -40,7 +40,7 @@ struct Config {
 
 fn main() {
     // 1. Define the config structure.
-    let config_const_values: Config = {
+    let config_const_values  = {
         // 2. Get the path of the config file from the command line.
         let config_path = std::env::args().nth(1).unwrap();
 
@@ -48,7 +48,7 @@ fn main() {
         let config_text = std::fs::read_to_string(&config_path).unwrap();
 
         // 4. Load an unmutable statically-typed structure from the string.
-        toml::from_str(&config_text).unwrap()
+        toml::from_str::<Config>(&config_text).unwrap()
     };
 
     // 5. Get and show one config value.
