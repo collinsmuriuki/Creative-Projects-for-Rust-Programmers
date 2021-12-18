@@ -15,3 +15,6 @@ host = "localhost"
 port = "5432"
 database = "Rust2018"
 
+[foo]
+object = {id = "1", name = "baz"}
+array = [1, 2, 3]
